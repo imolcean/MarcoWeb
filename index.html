@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="windows-1251">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Marco</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+    <link href="css/registration_popup.css" rel="stylesheet">
+
+    <!-- Custom JS -->
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="js/interface.js"></script>
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li>
+                        <a href="#home">Home</a>
+                    </li>
+					<li>
+                        <a href="#control">Control</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="home"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                        <h1>Marco</h1>
+                        <h3>Web control</h3>
+						<hr class="intro-divider" />
+						<div class="container control">
+							<div class="row">
+							
+								<div class="col-md-6 control-left">
+									<div class="row">
+										<div class="col-md-11">
+											<img src="img/img1.png" alt="Camera" class="img-rounded img-responsive">
+										</div>
+										<div class="col-md-1" align="left">
+											<p><span class="label label-danger marco-connection"><span class="glyphicon glyphicon-signal"></span></span></p>
+											<p><span class="label label-danger marco-cam"><span class="glyphicon glyphicon-facetime-video"></span></span></p>
+											<p><span class="label label-danger marco-compass"><span class="glyphicon glyphicon-asterisk"></span></span></p>
+											<p><span class="label label-danger marco-gps"><span class="glyphicon glyphicon-globe"></span></span></p>
+											<p><span class="label label-danger marco-brake "><span class="glyphicon glyphicon-exclamation-sign"></span></span></p>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-11">
+											<br />
+											<form class="form cmdForm" role="form">
+												<div class="form-group input-group">
+													<label class="sr-only" for="cmdInput">Command</label>
+													<input type="text" class="form-control" id="cmdInput" placeholder="Command">
+													<span class="input-group-btn">
+														<button class="btn btn-default" type="submit">Send</button>
+													</span>
+												</div>
+											</form>
+											
+											<form class="form connectionForm" role="form">
+												<div class="form-group input-group">
+													<label class="sr-only" for="addressInput">Address</label>
+													<input type="text" class="form-control" id="addressInput" placeholder="Address">
+													<span class="input-group-btn">
+														<button class="btn btn-default" type="submit">Connect</button>
+													</span>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-md-6 control-right">
+									<div class="row">
+										<div class="col-md-4">
+										</div>
+										<div class="col-md-4">
+											<button class="btn btn-default btn-lg marco-up" type="button" disabled>
+												<span class="glyphicon glyphicon-chevron-up"/span>
+											</button>
+										</div>
+										<div class="col-md-4">
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-5" align="right">
+											<button class="btn btn-default btn-lg marco-left" type="button" disabled>
+												<span class="glyphicon glyphicon-chevron-left"></span>
+											</button>
+										</div>
+										<div class="col-md-2">
+											<button class="btn btn-default btn-lg marco-down" type="button" disabled>
+												<span class="glyphicon glyphicon-chevron-down"></span>
+											</button>
+										</div>
+										<div class="col-md-5" align="left">
+											<button class="btn btn-default btn-lg marco-right" type="button" disabled>
+												<span class="glyphicon glyphicon-chevron-right"></span>
+											</button>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-12">
+											<br />
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col-md-4">
+										</div>
+										<div class="col-md-2">
+											<button class="btn btn-default marco-minus" type="button" disabled>
+												<span class="glyphicon glyphicon-minus"></span>
+											</button>
+										</div>
+										<div class="col-md-2">
+											<button class="btn btn-default marco-plus" type="button" disabled>
+												<span class="glyphicon glyphicon-plus"></span>
+											</button>
+										</div>
+										<div class="col-md-4">
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+	<a  name="control"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading">Control</h2>
+                    <p class="lead">
+						To move the robot you can use
+						<kbd><span class="glyphicon glyphicon-arrow-up"></span></kbd>
+						<kbd><span class="glyphicon glyphicon-arrow-down"></span></kbd>
+						<kbd><span class="glyphicon glyphicon-arrow-left"></span></kbd>
+						<kbd><span class="glyphicon glyphicon-arrow-right"></span></kbd>
+						or <kbd>W</kbd> <kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd>.
+						<br />
+						To change the movement speed use <kbd>+</kbd> <kbd>-</kbd> or <kbd>Q</kbd> <kbd>E</kbd>.
+						<br />
+						Use <kbd>C</kbd> to toggle the camera.
+					</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#home">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="#control">Control</a>
+                        </li>
+						<li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                            <a href="https://github.com/imolcean/marco">GitHub</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Igor Molcean 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
