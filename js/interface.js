@@ -1,4 +1,6 @@
 var pressed = [];
+var pressedOld = [];
+
 var stdTime;
 var cam;
 var connection;
@@ -8,7 +10,7 @@ var socket;
 
 function init()
 {
-	stdTime = 500;
+	stdTime = 0;
 	
 	connection = false;
 	
@@ -99,6 +101,30 @@ function toggleCam()
 
 function handleKeys()
 {
+	// CHECK WHETHER A NEW KEY HAS BEEN PRESSED/RELEASED
+	
+	var i;
+	var old = true;
+	
+	for(var i in pressed)
+	{
+		if(pressed[i] != pressedOld[i])
+		{
+			old = false;
+			break;
+		}
+	}
+	
+	if(old)
+	{
+		return;
+	}
+	
+	for(var i in pressed)
+	{
+		pressedOld[i] = pressed[i];
+	}
+	
 	// SPECIAL ACTIONS
 	
 	var camera   = pressed[  "CAM"]                 || false;
@@ -233,7 +259,7 @@ $(document).keydown(function(e)
 	
 	e = e || window.event;
 	
-	var flag = true;
+	var focused = true;
 	
 	if     (e.keyCode == "W".charCodeAt(0)) pressed["W"] = true;
 	else if(e.keyCode == "A".charCodeAt(0)) pressed["A"] = true;
@@ -255,9 +281,9 @@ $(document).keydown(function(e)
 	
 	else if(e.keyCode == "C".charCodeAt(0)) pressed["CAM"] = true;
 	
-	else flag = false;
+	else focused = false;
 	
-	if(flag)
+	if(focused)
 	{
 		e.preventDefault();
 	}
