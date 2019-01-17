@@ -1,3 +1,3 @@
 # MarcoWeb
 
-Web interface for controlling the Marco robot.
+Web interface for controlling Marco rover.
